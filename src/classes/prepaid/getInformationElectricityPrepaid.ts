@@ -1,22 +1,22 @@
 import axios from 'axios'
-import { Config } from './Config'
+import { IElectricityInformation } from '../../interfaces/prepaid-transaction.interface'
+import { Config } from '../Config'
 
-export class DepositeBillFazz {
+export class InformationElectricityPrepaid {
   private cfg: Config
 
   constructor(config: Config) {
     this.cfg = config
   }
 
-  getDeposit = async () => {
+  getInformationElectricityPrepaid = async (data: IElectricityInformation) => {
     try {
-      const response = await axios.get(this.cfg.domain_url + '/api/v1/deposits/client/balance', {
+      const response = await axios.post(this.cfg + '/api/v1/prepaid/info', data, {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
         },
       })
-
       return {
         data: response.data,
         status: response.status,

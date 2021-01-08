@@ -11,7 +11,7 @@ export class ProductBillFazz {
 
   getAllProduct = async () => {
     try {
-      const response = await axios.get(this.cfg.domain_url + '/sandbox/api/v1/products/client', {
+      const response = await axios.get(this.cfg.domain_url + '/api/v1/products/client', {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
@@ -50,7 +50,7 @@ export class ProductBillFazz {
   getProductByType = async (type: ProductType) => {
     try {
       const response = await axios.get(
-        this.cfg.domain_url + `/sandbox/api/v1/products/client?type=${type}`,
+        this.cfg.domain_url + `/api/v1/products/client?type=${type}`,
         {
           auth: {
             username: this.cfg.api_key || '',
@@ -90,7 +90,7 @@ export class ProductBillFazz {
   getActiveProduct = async (status: boolean) => {
     try {
       const response = await axios.get(
-        this.cfg.domain_url + `/sandbox/api/v1/products/client?active=${status}`,
+        this.cfg.domain_url + `/api/v1/products/client?active=${status}`,
         {
           auth: {
             username: this.cfg.api_key || '',
