@@ -1,24 +1,23 @@
 import axios from 'axios'
-import { Config } from './Config'
+import { Config } from '../Config'
+import { IPostpaidTransaction } from '../../interfaces/postpaid-transaction.interface'
 
-export class DepositBillFazz {
+export class PostpaidTransaction {
   private cfg: Config
 
   constructor(config: Config) {
     this.cfg = config
   }
 
-  getDeposit = async () => {
+  paymentForPostpaid = async (data: IPostpaidTransaction) => {
     try {
-      const response = await axios.get(this.cfg.domain_url + '/api/v1/deposits/client/balance', {
+      const response = await axios.post(this.cfg + '/api/v1/postpaid/payment', data, {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
         },
       })
 
-      console.log('data = ', response.data)
-      console.log('status = ', response.status)
       return {
         data: response.data,
         status: response.status,
