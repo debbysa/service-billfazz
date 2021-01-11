@@ -17,8 +17,9 @@ export class DepositBillFazz {
         },
       })
 
-      console.log('data = ', response.data)
-      console.log('status = ', response.status)
+      // console.log('data = ', response.data)
+      // console.log('status = ', response.status)
+
       return {
         data: response.data,
         status: response.status,
