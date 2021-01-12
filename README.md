@@ -93,3 +93,5 @@ const depositService = new DepositBillFazz(config)
 // get deposit
 depositService.getDeposit()
 ```
+
+note : Advice is using for Order check
