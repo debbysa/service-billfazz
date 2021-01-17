@@ -11,7 +11,7 @@ export class InformationElectricityPrepaid {
 
   getInformationElectricityPrepaid = async (data: IElectricityInformation) => {
     try {
-      const response = await axios.post(this.cfg + '/api/v1/prepaid/info', data, {
+      const response = await axios.post(this.cfg.domain_url + '/api/v1/prepaid/info', data, {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',

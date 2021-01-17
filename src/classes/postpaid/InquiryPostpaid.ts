@@ -15,7 +15,7 @@ export class InquiryPostpaid {
 
   getInquiryPostpaidGeneral = async (data: InquiryPostpaidGeneral) => {
     try {
-      const response = await axios.post(this.cfg + '/api/v1/postpaid/inquiry', data, {
+      const response = await axios.post(this.cfg.domain_url + '/api/v1/postpaid/inquiry', data, {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
@@ -51,7 +51,7 @@ export class InquiryPostpaid {
 
   getInquiryPostpaidBpjs = async (data: InquiryPostpaidBpjs) => {
     try {
-      const response = await axios.post(this.cfg + '/api/v1/postpaid/inquiry', data, {
+      const response = await axios.post(this.cfg.domain_url + '/api/v1/postpaid/inquiry', data, {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
@@ -88,7 +88,7 @@ export class InquiryPostpaid {
 
   getInquiryPostpaidPbb = async (data: InquiryPostpaidPbb) => {
     try {
-      const response = await axios.post(this.cfg + '/api/v1/postpaid/inquiry', data, {
+      const response = await axios.post(this.cfg.domain_url + '/api/v1/postpaid/inquiry', data, {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
