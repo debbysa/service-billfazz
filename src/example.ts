@@ -21,4 +21,4 @@ const req = {
   productCode: 'TLKM5',
 }
 
-prepaidService.doPrepaidTransaction(req)
+// prepaidService.doPrepaidTransaction(req)
