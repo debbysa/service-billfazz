@@ -11,7 +11,11 @@ export class PostpaidTransaction {
 
   paymentForPostpaid = async (data: IPostpaidTransaction) => {
     try {
+      let headers = {
+        'Content-Type': 'application/json',
+      }
       const response = await axios.post(this.cfg.domain_url + '/api/v1/postpaid/payment', data, {
+        headers,
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',

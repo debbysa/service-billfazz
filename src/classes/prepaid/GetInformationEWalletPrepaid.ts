@@ -11,7 +11,11 @@ export class InformationEWalletPrepaid {
 
   getInformationEWalletPrepaid = async (data: IEWalletInformation) => {
     try {
+      let headers = {
+        'Content-Type': 'application/json',
+      }
       const response = await axios.post(this.cfg.domain_url + '/api/v1/prepaid/info', data, {
+        headers,
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',

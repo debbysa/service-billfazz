@@ -2,7 +2,7 @@ export interface IprepaidTransaction {
   destinationNo: string
   refId: string
   productCode: string
-  callbackUrl?: string
+  callbackUrl?: undefined
 }
 
 export interface IElectricityInformation {
