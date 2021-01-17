@@ -1,6 +1,6 @@
 {
   "name": "service-billfazz",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a service to access api from BillFazz",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
