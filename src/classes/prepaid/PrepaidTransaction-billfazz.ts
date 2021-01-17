@@ -10,13 +10,21 @@ export class PrepaidTransaction {
   }
 
   doPrepaidTransaction = async (data: IprepaidTransaction) => {
+    let headers = {
+      'Content-Type': 'application/json',
+    }
     try {
+      console.log(this.cfg.domain_url)
       const response = await axios.post(this.cfg.domain_url + '/api/v1/prepaid/payment', data, {
+        headers,
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
         },
       })
+
+      console.log('response data = ', response.data)
+      console.log('status error = ', response.status)
 
       return {
         data: response.data,

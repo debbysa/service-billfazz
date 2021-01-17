@@ -11,14 +11,15 @@ let config = new Config(
 
 let depositService = new DepositBillFazz(config)
 // get deposit
-depositService.getDeposit()
+// depositService.getDeposit()
 
 let prepaidService = new PrepaidTransaction(config)
 
 const req = {
-  destinationNo: '081330441663',
-  refId: 'ORDER-001',
+  destinationNo: '081330441555',
+  refId: 'ORDER-010',
   productCode: 'TLKM5',
 }
+// console.log(req)
 
-// prepaidService.doPrepaidTransaction(req)
+prepaidService.doPrepaidTransaction(req)
