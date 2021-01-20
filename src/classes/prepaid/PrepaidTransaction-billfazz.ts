@@ -13,6 +13,7 @@ export class PrepaidTransaction {
     let headers = {
       'Content-Type': 'application/json',
     }
+
     try {
       console.log(this.cfg.domain_url)
       const response = await axios.post(this.cfg.domain_url + '/api/v1/prepaid/payment', data, {

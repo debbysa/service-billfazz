@@ -14,10 +14,11 @@ export class InquiryPostpaid {
   }
 
   getInquiryPostpaidGeneral = async (data: InquiryPostpaidGeneral) => {
+    let headers = {
+      'Content-Type': 'application/json',
+    }
+
     try {
-      let headers = {
-        'Content-Type': 'application/json',
-      }
       const response = await axios.post(this.cfg.domain_url + '/api/v1/postpaid/inquiry', data, {
         headers,
         auth: {
@@ -54,10 +55,11 @@ export class InquiryPostpaid {
   }
 
   getInquiryPostpaidBpjs = async (data: InquiryPostpaidBpjs) => {
+    let headers = {
+      'Content-Type': 'application/json',
+    }
+
     try {
-      let headers = {
-        'Content-Type': 'application/json',
-      }
       const response = await axios.post(this.cfg.domain_url + '/api/v1/postpaid/inquiry', data, {
         headers,
         auth: {
@@ -65,6 +67,8 @@ export class InquiryPostpaid {
           password: this.cfg.api_secret || '',
         },
       })
+
+      console.log(response.data)
 
       return {
         data: response.data,
@@ -95,10 +99,11 @@ export class InquiryPostpaid {
   }
 
   getInquiryPostpaidPbb = async (data: InquiryPostpaidPbb) => {
+    let headers = {
+      'Content-Type': 'application/json',
+    }
+
     try {
-      let headers = {
-        'Content-Type': 'application/json',
-      }
       const response = await axios.post(this.cfg.domain_url + '/api/v1/postpaid/inquiry', data, {
         headers,
         auth: {
