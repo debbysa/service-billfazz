@@ -24,7 +24,7 @@ export class ProductBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getAllProduct response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -38,7 +38,7 @@ export class ProductBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getAllProduct Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -64,7 +64,7 @@ export class ProductBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProductBySearchQuery response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -78,7 +78,7 @@ export class ProductBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProductBySearchQuery Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -104,7 +104,7 @@ export class ProductBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProductByType response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -118,7 +118,7 @@ export class ProductBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProductByType Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -144,7 +144,7 @@ export class ProductBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProductByOperatorType response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -158,7 +158,7 @@ export class ProductBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProductByOperatorType Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -184,7 +184,7 @@ export class ProductBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getActiveProduct response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -198,7 +198,7 @@ export class ProductBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getActiveProduct Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -224,7 +224,7 @@ export class ProductBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('getProblemProduct response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -238,7 +238,7 @@ export class ProductBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getProblemProduct Error message = ', error.message)
         return {
           message: error.message,
         }
