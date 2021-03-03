@@ -17,7 +17,7 @@ export class DepositBillFazz {
         },
       })
 
-      console.log('data = ', response.data)
+      console.log('deposit response = ', response.data)
       console.log('status = ', response.status)
 
       return {
@@ -26,7 +26,7 @@ export class DepositBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('deposit response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -40,7 +40,7 @@ export class DepositBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('getDeposit Error message = ', error.message)
         return {
           message: error.message,
         }

@@ -32,7 +32,7 @@ export class InquiryPostpaid {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('inquiry postpaid response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -46,7 +46,7 @@ export class InquiryPostpaid {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('inquiry postpaid Error message = ', error.message)
         return {
           message: error.message,
         }

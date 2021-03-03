@@ -28,7 +28,7 @@ export class InformationEWalletPrepaid {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('ewallet info response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -42,7 +42,7 @@ export class InformationEWalletPrepaid {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('ewallet info Error message = ', error.message)
         return {
           message: error.message,
         }

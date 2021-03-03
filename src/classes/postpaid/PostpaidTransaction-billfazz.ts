@@ -29,7 +29,7 @@ export class PostpaidTransaction {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('payment postpaid response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -43,7 +43,7 @@ export class PostpaidTransaction {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('payment postpaid Error message = ', error.message)
         return {
           message: error.message,
         }

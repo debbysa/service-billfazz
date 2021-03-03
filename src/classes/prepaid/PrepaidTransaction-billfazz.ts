@@ -23,9 +23,8 @@ export class PrepaidTransaction {
           password: this.cfg.api_secret || '',
         },
       })
-
-      console.log('response data = ', response.data)
-      console.log('status error = ', response.status)
+      // console.log('prepaid transaction response = ', response.data)
+      // console.log('status error = ', response.status)
 
       return {
         data: response.data,
@@ -33,7 +32,7 @@ export class PrepaidTransaction {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('prepaid transaction response = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -47,7 +46,7 @@ export class PrepaidTransaction {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('prepaid transaction Error message = ', error.message)
         return {
           message: error.message,
         }

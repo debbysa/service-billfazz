@@ -23,7 +23,7 @@ export class AdviceBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('advice check transaction status = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -37,7 +37,7 @@ export class AdviceBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('checkStatusByRefId Error message = ', error.message)
         return {
           message: error.message,
         }
@@ -59,7 +59,7 @@ export class AdviceBillFazz {
       }
     } catch (error) {
       if (error.response) {
-        console.log('response data = ', error.response.data)
+        console.log('advice check transaction status = ', error.response.data)
         console.log('status error = ', error.response.status)
         return {
           status: error.response.status,
@@ -73,7 +73,7 @@ export class AdviceBillFazz {
         }
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log('Error message = ', error.message)
+        console.log('checkStatusByOrderId Error message = ', error.message)
         return {
           message: error.message,
         }
