@@ -10,7 +10,7 @@ export class DepositBillFazz {
 
   getDeposit = async () => {
     try {
-      const response = await axios.get(this.cfg.domain_url + '/api/v1/deposits/client/balance', {
+      const response = await axios.get(this.cfg.domain_url + '/api/v1/app/deposits/balance', {
         auth: {
           username: this.cfg.api_key || '',
           password: this.cfg.api_secret || '',
